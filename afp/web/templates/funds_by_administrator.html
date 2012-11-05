@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load i18n %}
+{% load l10n %}
 
 {% block js %}
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -17,13 +17,12 @@
 </div>
 
 <div class="row">
-
     {% for fund in funds %}
     {% with day=fund.get_last_day %}
     <div class="span6 box fund">
         <h2 class="fund-title" data-id="{{fund.id}}">Fondo {{fund}}</h2>
-        <p>Valor cuota: ${{day.value}}</p>
         <p>Rentabilidad último año: {{fund.get_profitability|floatformat:3 }}%</p>
+        <p>Valor cuota: ${{day.value|localize}}</p>
         <div id="chart{{fund.id}}"></div>
     </div>
     {% endwith %}

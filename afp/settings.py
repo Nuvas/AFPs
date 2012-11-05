@@ -153,6 +153,8 @@ LOGGING = {
 
 JUNAR_AUTH_KEY = 'yourauthkey'
 
+USE_THOUSAND_SEPARATOR = True
+
 try:
     from afp.local_settings import *
 except ImportError:
