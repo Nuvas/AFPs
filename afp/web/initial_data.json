@@ -1,0 +1,290 @@
+[
+    {
+        "pk": 1,
+        "model": "web.administrator",
+        "fields": {
+            "url": "",
+            "name": "CAPITAL"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "web.administrator",
+        "fields": {
+            "url": "",
+            "name": "CUPRUM"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "web.administrator",
+        "fields": {
+            "url": "",
+            "name": "HABITAT"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "web.administrator",
+        "fields": {
+            "url": "",
+            "name": "MODELO"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "web.administrator",
+        "fields": {
+            "url": "",
+            "name": "PLANVITAL"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "web.administrator",
+        "fields": {
+            "url": "",
+            "name": "PROVIDA"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 1,
+            "name": "A"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 1,
+            "name": "B"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 1,
+            "name": "C"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 1,
+            "name": "D"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 1,
+            "name": "E"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 2,
+            "name": "A"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 2,
+            "name": "B"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 2,
+            "name": "C"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 2,
+            "name": "D"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 2,
+            "name": "E"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 3,
+            "name": "A"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 3,
+            "name": "B"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 3,
+            "name": "C"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 3,
+            "name": "D"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 3,
+            "name": "E"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 4,
+            "name": "A"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 4,
+            "name": "B"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 4,
+            "name": "C"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 4,
+            "name": "D"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 4,
+            "name": "E"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 5,
+            "name": "A"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 5,
+            "name": "B"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 5,
+            "name": "C"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 5,
+            "name": "D"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 5,
+            "name": "E"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 6,
+            "name": "A"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 6,
+            "name": "B"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 6,
+            "name": "C"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 6,
+            "name": "D"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "web.fund",
+        "fields": {
+            "administrator": 6,
+            "name": "E"
+        }
+    }
+]

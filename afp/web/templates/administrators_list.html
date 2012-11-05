@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block body %}
+
+    <h2>Administradores</h2>
+
+    <table class="table sortable table-striped table-bordered">
+        <tbody>
+            {% for administrator in administrators %}
+            <tr>
+              <td><a href="{{ administrator.get_absolute_url }}">{{administrator}}</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

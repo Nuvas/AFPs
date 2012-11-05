@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block js %}
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="/static/js/base.js"></script>
+{% endblock %}
+
+{% block body %}
+<div class="administrator">
+<h1>Compare los fondos {{slug|upper}}</h1>
+{% with day=funds.0.get_last_day %}
+<p>última actualización: {{day.date}}</p>
+{% endwith %}
+</div>
+
+<div class="row">
+    {% for fund in funds %}
+    {% with day=fund.get_last_day %}
+    <div class="span6 box fund">
+        <h2 class="fund-title" data-id="{{fund.id}}">Fondo {{fund}} / {{fund.administrator}}</h2>
+        <p>Valor cuota: ${{day.value|localize}}</p>
+        <p>Rentabilidad último año: {{fund.get_profitability|floatformat:3 }}%</p>
+        <div id="chart{{fund.id}}"></div>
+    </div>
+    {% endwith %}
+    {% endfor %}
+</div>
+{% endblock %}
