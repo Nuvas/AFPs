@@ -39,10 +39,10 @@ class Fund(models.Model):
         except IndexError:
             return None
 
-    def get_line_data(self):
+    def get_line_data(self, date):
         response = '{"cols":[{"id":"date","label":"Fecha","type":"date"},{"id":"nav","label":"Valor Cuota","type":"number"}],"rows":['
         rows = []
-        days = self.day_set.values('date', 'value').all()
+        days = self.day_set.values('date', 'value').filter(date__gte = date)
         for day in days:
             rows.append('{"c":[{"v":"%s"},{"v":%s}]}' % (day['date'], day['value']))
         response += ','.join(rows)
@@ -50,11 +50,11 @@ class Fund(models.Model):
         return response
 
     def get_profitability(self):
-        max_date = self.day_set.all().aggregate(models.Max('date'))['date__max']
-        year_ago = max_date - datetime.timedelta(days=365)
-        year_ago_data = self.day_set.get(date = year_ago)
-        last_day_data = self.day_set.get(date = max_date)
-        return ((last_day_data.value-year_ago_data.value)/year_ago_data.value) * 100
+        finish_at = self.day_set.all().aggregate(models.Max('date'))['date__max']
+        start_at = finish_at - datetime.timedelta(days=365)
+        start_date = self.day_set.get(date = start_at)
+        finish_date = self.day_set.get(date = finish_at)
+        return ((finish_date.value-start_date.value)/start_date.value) * 100
 
 class Day(models.Model):
     date = models.DateField()

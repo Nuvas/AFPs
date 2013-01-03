@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render_to_response, redirect
 from afp.web.models import *
+import datetime
 
 def home(request):
     return render_to_response('home.html')
@@ -12,8 +13,9 @@ def funds_by_administrator(request, slug):
 
 def fund_chart_data(request):
     fund_id = request.GET.get('id')
+    date = datetime.datetime.now() - datetime.timedelta(days=365)
     fund = get_object_or_404(Fund, pk=fund_id)
-    data = fund.get_line_data()
+    data = fund.get_line_data(date)
     return HttpResponse(data)
 
 def funds_by_name(request, slug):
